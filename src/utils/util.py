@@ -15,7 +15,7 @@ def getParams(env: str = "loc", params: dict = {}) -> dict:
             dict
     """
     try:
-        path_conf = os.path.abspath(os.path.dirname(__file__) + "/../../config")
+        path_conf = os.path.abspath(os.path.dirname(__file__) + "/../../conf")
         return yaml.load(open(f"{path_conf}/{env}-params.yaml"), Loader=yaml.FullLoader)
     
     except Exception as e:
